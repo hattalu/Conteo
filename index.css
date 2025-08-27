@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fondo-img-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.fondo-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+.img-btn {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transition: transform 0.2s;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.2;
+}
+.img-btn:hover {
+    transform: scale(1.03);
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+#modal-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 2rem;
+}
+#close-btn {
+    margin-top: 20px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.click-area {
+    position: absolute;
+    top: 58%;
+    left: 40%;
+    width: 5vw;
+    height: 10vh;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.click-area:hover ~ .img-btn,
+.click-area:focus ~ .img-btn {
+    transform: scale(1.02);
+}
