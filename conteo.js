@@ -7,7 +7,7 @@ document.getElementById('close-btn').onclick = function() {
 };
 
 function startCountdown() {
-    const endDate = new Date(Date.now() + 9 * 24 * 60 * 60 * 1000);
+    const endDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
     updateCountdown(endDate);
     if (window.countdownInterval) clearInterval(window.countdownInterval);
     window.countdownInterval = setInterval(() => updateCountdown(endDate), 1000);
@@ -29,3 +29,4 @@ function updateCountdown(endDate) {
         `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
 
 }
+
